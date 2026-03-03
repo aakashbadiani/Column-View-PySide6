@@ -2,7 +2,7 @@
 
 ## Origin
 
-Extracted from `100 Code/src/ui_treeview/`. The original BOM-specific logic
+Extracted from a production codebase. The original BOM-specific logic
 (Interface() calls, quantity links, project filtering, StyleManager coupling)
 has been removed. The widget is now data-agnostic.
 
@@ -136,3 +136,4 @@ level_mgr.expand_to_level(1)
 - Project/focus filtering
 - User config persistence
 - BOM-specific row creation logic
+

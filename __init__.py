@@ -1,7 +1,7 @@
 """
 ClawTreeViewPackage -- Data-agnostic TreeView and ColumnView widgets for PySide6.
 
-Extracted and refactored from BOM Bastic's ui_treeview and ui_columnview modules.
+Extracted and refactored from a production application.
 All project-specific logic has been removed. These widgets accept any compatible
 data table via the DataProvider protocol.
 
@@ -80,3 +80,4 @@ __all__ = [
     "PATHS",
     "PackagePathManager",
 ]
+

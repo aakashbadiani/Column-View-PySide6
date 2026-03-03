@@ -2,7 +2,7 @@
 
 ## Origin
 
-Extracted from `100 Code/src/ui_columnview/`. The original BOM-specific logic
+Extracted from a production codebase. The original BOM-specific logic
 (Interface() calls, PATHS.get_part_dir, user config persistence, thumbnail
 file naming conventions) has been removed. The widget now uses a
 ThumbnailProvider protocol for any thumbnail source.
@@ -175,3 +175,4 @@ column_mgr = ColumnViewManager(
 - BOM-specific part data fetching in delegate paint()
 - Debug background colors (red tinted) from factory
 - Hardcoded thumbnail file naming conventions
+
