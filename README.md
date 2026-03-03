@@ -1,4 +1,4 @@
-# QtColumnView
+# pyside6-column-view
 
 A standalone PySide6 column view widget with thumbnail support, extracted from a production BOM (Bill of Materials) application.
 
@@ -68,7 +68,7 @@ python examples/example_column_view.py
 
 ```
 columnview/
-    column_view.py          -- QtColumnView (QColumnView subclass)
+    column_view.py          -- pyside6-column-view (QColumnView subclass)
     column_manager.py       -- ColumnViewManager (orchestrator)
     thumbnail_widget.py     -- ThumbnailWidget (click-to-cycle display)
     thumbnail_delegate.py   -- ThumbnailColumnDelegate (paint + editor)
@@ -94,4 +94,5 @@ examples/
 ## License
 
 MIT
+
 
