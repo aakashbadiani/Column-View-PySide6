@@ -1,4 +1,4 @@
-# ClawColumnView -- Column View Widget Documentation
+# QtColumnView -- Column View Widget Documentation
 
 ## Origin
 
@@ -11,7 +11,7 @@ ThumbnailProvider protocol for any thumbnail source.
 
 ```
 columnview/
-  column_view.py          -- ClawColumnView (QColumnView subclass)
+  column_view.py          -- QtColumnView (QColumnView subclass)
   column_manager.py       -- ColumnViewManager (orchestrator)
   thumbnail_widget.py     -- ThumbnailWidget (display/cycling widget)
   thumbnail_delegate.py   -- ThumbnailColumnDelegate (paint + editor)
@@ -21,7 +21,7 @@ columnview/
 
 ## Components
 
-### ClawColumnView (`column_view.py`)
+### QtColumnView (`column_view.py`)
 
 Custom QColumnView solving Qt's editor overlay problem:
 - Prevents white selection background from obscuring editor widgets
@@ -44,7 +44,7 @@ Signals:
 - `context_menu_requested(QPoint, QModelIndex)` -- for custom menus
 
 Key methods:
-- `get_widget()` -- returns the ClawColumnView for layout embedding
+- `get_widget()` -- returns the QtColumnView for layout embedding
 - `navigate_to_item(item_id)` -- programmatic navigation
 - `restore_selection_path(["ROOT", "CHILD", "LEAF"])` -- path restoration
 - `set_thumbnail_provider(provider)` -- set/change thumbnail source
@@ -103,7 +103,7 @@ ThumbnailProvider.save_thumbnail() / delete_thumbnail()
 ## Usage Pattern
 
 ```python
-from ClawTreeViewPackage import (
+from QtTreeViewPackage import (
     ColumnViewManager, TreeModel, DictDataProvider
 )
 from PySide6.QtGui import QStandardItemModel
@@ -175,4 +175,5 @@ column_mgr = ColumnViewManager(
 - BOM-specific part data fetching in delegate paint()
 - Debug background colors (red tinted) from factory
 - Hardcoded thumbnail file naming conventions
+
 

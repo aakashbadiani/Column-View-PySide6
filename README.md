@@ -1,4 +1,4 @@
-# ClawColumnView
+# QtColumnView
 
 A standalone PySide6 column view widget with thumbnail support, extracted from a production BOM (Bill of Materials) application.
 
@@ -22,7 +22,7 @@ Clone this repo and import directly -- no package install required yet.
 ## Quick Start
 
 ```python
-from ClawTreeViewPackage import ColumnViewManager, TreeModel, DictDataProvider
+from QtTreeViewPackage import ColumnViewManager, TreeModel, DictDataProvider
 from PySide6.QtGui import QStandardItemModel
 from PySide6.QtWidgets import QApplication
 
@@ -68,7 +68,7 @@ python examples/example_column_view.py
 
 ```
 columnview/
-    column_view.py          -- ClawColumnView (QColumnView subclass)
+    column_view.py          -- QtColumnView (QColumnView subclass)
     column_manager.py       -- ColumnViewManager (orchestrator)
     thumbnail_widget.py     -- ThumbnailWidget (click-to-cycle display)
     thumbnail_delegate.py   -- ThumbnailColumnDelegate (paint + editor)
@@ -76,7 +76,7 @@ columnview/
     thumbnail_factory.py    -- ThumbnailWidgetFactory (standard sizes)
 tree/
     tree_model.py           -- TreeModel (QStandardItemModel builder)
-    tree_view.py            -- ClawTreeView
+    tree_view.py            -- QtTreeView
     tree_highlight.py       -- HighlightDelegate
     tree_level.py           -- LevelManager
     tree_refresh.py         -- RefreshManager
@@ -94,3 +94,4 @@ examples/
 ## License
 
 MIT
+

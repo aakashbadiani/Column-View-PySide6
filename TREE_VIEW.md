@@ -1,4 +1,4 @@
-# ClawTreeView -- Tree View Widget Documentation
+# QtTreeView -- Tree View Widget Documentation
 
 ## Origin
 
@@ -10,7 +10,7 @@ has been removed. The widget is now data-agnostic.
 
 ```
 tree/
-  tree_view.py        -- ClawTreeView (QTreeView subclass)
+  tree_view.py        -- QtTreeView (QTreeView subclass)
   tree_model.py       -- TreeModel (data adapter)
   tree_highlight.py   -- HighlightDelegate + TreeHighlightController
   tree_level.py       -- LevelManager (expand/collapse buttons)
@@ -19,7 +19,7 @@ tree/
 
 ## Components
 
-### ClawTreeView (`tree_view.py`)
+### QtTreeView (`tree_view.py`)
 
 Custom QTreeView with:
 - `itemClicked` signal emitting QModelIndex on click
@@ -79,7 +79,7 @@ DataProvider.get_all_items()
 TreeModel.build_tree()
     |
     v
-QStandardItemModel  <-->  ClawTreeView
+QStandardItemModel  <-->  QtTreeView
                             |
                             v
                       HighlightDelegate (painting)
@@ -90,8 +90,8 @@ QStandardItemModel  <-->  ClawTreeView
 ## Usage Pattern
 
 ```python
-from ClawTreeViewPackage import (
-    ClawTreeView, TreeModel, DictDataProvider,
+from QtTreeViewPackage import (
+    QtTreeView, TreeModel, DictDataProvider,
     HighlightDelegate, LevelManager, TreeRefreshController
 )
 from PySide6.QtGui import QStandardItemModel
@@ -109,7 +109,7 @@ tree_model.set_headers(["ID", "Name"])
 tree_model.build_tree(qt_model, provider)
 
 # View
-tree = ClawTreeView()
+tree = QtTreeView()
 tree.setModel(qt_model)
 tree.setItemDelegate(HighlightDelegate(tree))
 
@@ -136,4 +136,5 @@ level_mgr.expand_to_level(1)
 - Project/focus filtering
 - User config persistence
 - BOM-specific row creation logic
+
 
